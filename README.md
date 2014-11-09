@@ -80,7 +80,8 @@ use SlimController\epDispatcher;
 use SlimController\Exception;
 use Slim\Route;
 
-require 'vendor/autoload.php';
+$loader = require 'vendor/autoload.php';
+$loader->add('SlimController', __DIR__ . DIRECTORY_SEPARATOR . 'vendor');
 
 $epConfig = array(
     'ep.controller.path' => __DIR__ . DIRECTORY_SEPARATOR . 'controllers',
